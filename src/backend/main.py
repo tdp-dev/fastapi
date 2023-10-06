@@ -13,7 +13,7 @@ from backend.settings import get_settings
 
 SETTINGS = get_settings()
 
-app = FastAPI("test")
+app = FastAPI("")
 app.include_router(router=users.router)
 app.include_router(
     fastapi_users.get_auth_router(auth_backend), prefix="/auth/jwt", tags=["auth"]
